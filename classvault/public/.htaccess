@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Cegah akses ke file tersembunyi
+    RewriteRule ^\.(.*)$ - [F]
+
+    # Jangan alihkan jika file atau direktori fisik memang ada (seperti file css, js, gambar)
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Alihkan seluruh request ke index.php
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+# Nonaktifkan directory listing
+Options -Indexes

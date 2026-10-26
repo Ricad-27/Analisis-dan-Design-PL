@@ -1,0 +1,15 @@
+# Environment file
+.env
+
+# Storage and uploads (kecuali .gitignore dan .htaccess)
+/storage/uploads/*
+!/storage/uploads/.gitkeep
+!/storage/uploads/.htaccess
+
+# IDE & OS files
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log

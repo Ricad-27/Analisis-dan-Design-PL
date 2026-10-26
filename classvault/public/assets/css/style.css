@@ -1,0 +1,185 @@
+/**
+ * ClassVault - Custom Stylesheet
+ * Berdasarkan Spesifikasi Desain UI/UX Bagian 10
+ */
+
+:root {
+    --cv-navy: #172033;
+    --cv-primary: #4568F5;
+    --cv-primary-hover: #3454db;
+    --cv-bg: #F6F8FC;
+    --cv-card: #FFFFFF;
+    --cv-text-primary: #202938;
+    --cv-text-secondary: #778195;
+    --cv-border: #E5E9F2;
+    --cv-success: #10B981;
+    --cv-warning: #F59E0B;
+    --cv-danger: #EF4444;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--cv-bg);
+    color: var(--cv-text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigasi */
+.navbar-cv {
+    background-color: var(--cv-card);
+    border-bottom: 1px solid var(--cv-border);
+}
+
+.navbar-brand-cv {
+    font-weight: 700;
+    color: var(--cv-navy) !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.brand-icon {
+    width: 32px;
+    height: 32px;
+    background-color: var(--cv-primary);
+    color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* Tombol Utama */
+.btn-primary {
+    background-color: var(--cv-primary);
+    border-color: var(--cv-primary);
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--cv-primary-hover);
+    border-color: var(--cv-primary-hover);
+}
+
+.btn-outline-primary {
+    color: var(--cv-primary);
+    border-color: var(--cv-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--cv-primary);
+    border-color: var(--cv-primary);
+    color: #fff;
+}
+
+/* Kartu & Container */
+.card-cv {
+    background-color: var(--cv-card);
+    border: 1px solid var(--cv-border);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.2s ease;
+}
+
+.card-cv:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 4rem 0 3rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, var(--cv-bg) 100%);
+}
+
+.hero-title {
+    color: var(--cv-navy);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+/* Badge Status & Visibility */
+.badge-visibility-private {
+    background-color: #F1F5F9;
+    color: #475569;
+}
+
+.badge-visibility-authenticated {
+    background-color: #E0E7FF;
+    color: #4338CA;
+}
+
+.badge-visibility-public {
+    background-color: #DCFCE7;
+    color: #15803D;
+}
+
+/* Form Styling */
+.form-control, .form-select {
+    border-color: var(--cv-border);
+    border-radius: 8px;
+    padding: 0.6rem 0.85rem;
+    color: var(--cv-text-primary);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--cv-primary);
+    box-shadow: 0 0 0 3px rgba(69, 104, 245, 0.15);
+}
+
+/* Sidebar Dashboard */
+.sidebar-cv {
+    background-color: var(--cv-card);
+    border-right: 1px solid var(--cv-border);
+    min-height: calc(100vh - 65px);
+}
+
+.sidebar-nav-link {
+    color: var(--cv-text-secondary);
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 0.25rem;
+    transition: all 0.15s ease;
+}
+
+.sidebar-nav-link:hover {
+    color: var(--cv-primary);
+    background-color: #F0F4FF;
+}
+
+.sidebar-nav-link.active {
+    color: var(--cv-primary);
+    background-color: #EEF2FF;
+    font-weight: 600;
+}
+
+/* Empty State */
+.empty-state {
+    padding: 3.5rem 1.5rem;
+    text-align: center;
+}
+
+.empty-state-icon {
+    font-size: 3rem;
+    color: var(--cv-text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    border-top: 1px solid var(--cv-border);
+    background-color: var(--cv-card);
+    padding: 1.5rem 0;
+    color: var(--cv-text-secondary);
+    font-size: 0.875rem;
+}
